@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="grades.html">Grades</a>
+        <div class="dropdown">
+            <button class="dropbtn">Account 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="register.html">Sign Up</a>
+                <a href="#" id="logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Grade Converter</h1>
+        <form id="gradeForm">
+            <label for="rollNumber">Student Roll Number</label>
+            <input type="text" id="rollNumber" name="rollNumber" required>
+            
+            <label for="name">Student Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="tamil">Tamil</label>
+            <input type="text" id="tamil" name="tamil" required>
+            
+            <label for="english">English</label>
+            <input type="text" id="english" name="english" required>
+            
+            <label for="maths">Maths</label>
+            <input type="text" id="maths" name="maths" required>
+            
+            <label for="physics">Physics</label>
+            <input type="text" id="physics" name="physics" required>
+            
+            <label for="chemistry">Chemistry</label>
+            <input type="text" id="chemistry" name="chemistry" required>
+            
+            <label for="biology">Biology</label>
+            <input type="text" id="biology" name="biology" required>
+            
+            <div id="error" style="color: red;"></div>
+            
+            <button type="submit">Calculate Grade</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
